@@ -4,10 +4,9 @@ const request = require('request');
 
 const url = weatherAPI.url;
 
-router.route('/search')
+router.route('/search/:zip')
 	.get((req, res) => {
-		console.log('REQ', req.data)
-		console.log('RES', res.data)
+		console.log('REQ', req.params.zip)
 	})
 
 module.exports = router;

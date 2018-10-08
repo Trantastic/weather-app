@@ -16,18 +16,12 @@ class Homepage extends Component {
 	getWeather = (e) => {
 		e.preventDefault();
 
-		fetch('/search')
+		fetch('/search/' + this.state.zipcode)
 			.then(res => 
 				res.json()
 			).then(data =>
 				console.log("DATA: ", data)
 			).catch(err => (console.log("ERROR: ", err)));
-
-		// fetch('/search', {
-		// 	method: 'GET',
-		// 	body: JSON.stringify(this.state),
-		// })
-		// .then(res => console.log('RESPONSE', res));
 	}
 
 	render() {
