@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Search from '../Search';
-import Weather from '../Weather';
 
 class Homepage extends Component {
 
